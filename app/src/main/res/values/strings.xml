@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">navigation-component</string>
+    <string name="name_hint">Name</string>
+    <string name="age_hint">age</string>
+    <string name="button_next">next</string>
+    <string name="street_hint">rua</string>
+    <string name="number_hint">numero</string>
+
+    <!-- Error messages -->
+    <string name="name_error">Invalid name</string>
+    <string name="street_error">Invalid street</string>
+    <string name="number_error">Invalid number</string>
+</resources>

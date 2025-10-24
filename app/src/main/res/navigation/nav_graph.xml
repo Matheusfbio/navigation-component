@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/personalDataFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_personal_data"
+        android:id="@+id/personalDataFragment"
+        android:name="com.br.navigation_component.fragments.PersonalDataFragment"
+        android:label="PersonalDataFragment" >
+        <action
+            android:id="@+id/go_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_address"
+        android:id="@+id/addressFragment"
+        android:name="com.br.navigation_component.fragments.AddressFragment"
+        android:label="AddressFragment" />
+</navigation>
