@@ -1,7 +1,19 @@
+
+//buildscript {
+//    repositories {
+//        google()
+//    }
+//    dependencies {
+//        def nav_version = "2.9.5"
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+//    }
+//}
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-}
+    alias(libs.plugins.androidx.navigation.safeargs.kotlin)
+    id("kotlin-parcelize")}
 
 android {
     namespace = "com.br.navigation_component"
@@ -36,6 +48,15 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    kotlin {
+        jvmToolchain(11) // This is a modern replacement for kotlinOptions.jvmTarget
+        sourceSets.all {
+            languageSettings {
+                optIn("kotlin.parcelize.ExperimentalParcelize")
+            }
+        }
     }
 }
 

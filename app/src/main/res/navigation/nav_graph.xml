@@ -2,21 +2,28 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/personalDataFragment">
 
     <fragment
-        tools:layout="@layout/fragment_personal_data"
         android:id="@+id/personalDataFragment"
         android:name="com.br.navigation_component.fragments.PersonalDataFragment"
-        android:label="PersonalDataFragment" >
+        android:label="PersonalDataFragment"
+        tools:layout="@layout/fragment_personal_data">
         <action
             android:id="@+id/go_to_addressFragment"
             app:destination="@id/addressFragment" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_address"
         android:id="@+id/addressFragment"
         android:name="com.br.navigation_component.fragments.AddressFragment"
-        android:label="AddressFragment" />
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address">
+        <argument
+            android:name="model"
+            app:argType="com.br.navigation_component.model.PersonModel" />
+    </fragment>
+    <argument
+        android:name="model"
+        app:argType="com.br.navigation_component.model.PersonModel" />
 </navigation>

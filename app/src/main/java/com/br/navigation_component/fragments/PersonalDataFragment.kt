@@ -1,5 +1,6 @@
 package com.br.navigation_component.fragments
 
+import android.app.Person
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,10 +29,11 @@ class PersonalDataFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnNext.setOnClickListener {
             val model = PersonModel(
-                name =binding.tilName.text,
+                name = binding.tilName.text,
                 age = binding.tilAge.text.toInt()
             )
-            findNavController().navigate(R.id.go_to_addressFragment)
+           val directions =  PersonalDataFragmentDirections.goToAddressFragment(model)
+            findNavController().navigate(directions)
         }
     }
 
