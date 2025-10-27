@@ -19,11 +19,22 @@
         android:name="com.br.navigation_component.fragments.AddressFragment"
         android:label="AddressFragment"
         tools:layout="@layout/fragment_address">
+
+        <argument
+            android:name="model"
+            app:argType="com.br.navigation_component.model.PersonModel" />
+        <action
+            android:id="@+id/go_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="com.br.navigation_component.fragments.ResumeFragment"
+        tools:layout="@layout/fragment_resume"
+        android:label="ResumeFragment">
         <argument
             android:name="model"
             app:argType="com.br.navigation_component.model.PersonModel" />
     </fragment>
-    <argument
-        android:name="model"
-        app:argType="com.br.navigation_component.model.PersonModel" />
 </navigation>

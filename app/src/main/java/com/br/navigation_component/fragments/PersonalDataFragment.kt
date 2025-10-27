@@ -1,16 +1,14 @@
 package com.br.navigation_component.fragments
 
-import android.app.Person
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.br.navigation_component.R
 import com.br.navigation_component.model.PersonModel
 import com.br.navigation_component.databinding.FragmentPersonalDataBinding
-import com.br.navigation_component.fragments.extensions.text
+import com.br.navigation_component.extensions.text
 
 class PersonalDataFragment: Fragment() {
     private var _binding: FragmentPersonalDataBinding? = null

@@ -1,4 +1,4 @@
-package com.br.navigation_component.fragments.extensions
+package com.br.navigation_component.extensions
 
 import com.google.android.material.textfield.TextInputLayout
 

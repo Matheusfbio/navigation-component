@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/app/src/androidTest/java/com/br/navigation_component/ExampleInstrumentedTest.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/main/java/com/br/navigation_component/fragments/extensions/ViewExtensions.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/main/java/com/br/navigation_component/fragments/AddressFragment.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/main/java/com/br/navigation_component/fragments/PersonalDataFragment.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/main/java/com/br/navigation_component/model/PersonModel.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/main/java/com/br/navigation_component/MainActivity.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/src/test/java/com/br/navigation_component/ExampleUnitTest.kt;/home/atthew-dev/Documentos/mfdev/navigationcomponent/app/build.gradle.kts;/home/atthew-dev/Documentos/mfdev/navigationcomponent/build.gradle.kts;/home/atthew-dev/Documentos/mfdev/navigationcomponent/README.md;/home/atthew-dev/Documentos/mfdev/navigationcomponent/settings.gradle.kts" />
+  </component>
+</project>

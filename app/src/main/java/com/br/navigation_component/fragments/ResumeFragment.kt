@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.br.navigation_component.databinding.FragmentAddressBinding
+import com.br.navigation_component.databinding.FragmentResumeBinding
 import com.br.navigation_component.extensions.text
 import com.br.navigation_component.model.PersonModel
+import kotlin.getValue
 
-class AddressFragment : Fragment() {
-    private var _binding: FragmentAddressBinding? = null
+class ResumeFragment: Fragment() {
+    private var _binding: FragmentResumeBinding? = null
     private val binding get() = _binding!!
 
-    private val args by navArgs<AddressFragmentArgs>()
+    private val args by navArgs<ResumeFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         group: ViewGroup?,
         saved: Bundle?
     ): View? {
-        _binding = FragmentAddressBinding.inflate(inflater, group, false)
+        _binding = FragmentResumeBinding.inflate(inflater, group, false)
         return binding.root
     }
 
@@ -33,19 +33,13 @@ class AddressFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         Log.e(TAG, "onViewCreated: ${args.model}")
-        binding.btnNext.setOnClickListener {
-            val model = args.model.copy(
-                street = binding.tilStreet.text,
-                houseNumber = binding.tilNumber.text.toInt()
-            )
-            val directions = AddressFragmentDirections.goToResumeFragment(model)
-            findNavController().navigate(directions)
-
-        }
+        binding.tvPerson.text = args.model.person
+        binding.tvAddress.text = args.model.address
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }
